@@ -105,7 +105,7 @@ cd catkin_ws/bash
 ```
 
 ## Nodes
-`Src` include the following packages.
+Below are the following Nodes:
 ### Offboard_pkg
 
 Offboard_pkg publishes and subscribes the following topics.
