@@ -13,7 +13,9 @@ The repository contains Offboard Control for controlling UAVs using the mavros p
 [![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg)](https://youtu.be/IEyocdnlYw0 "Circular trajectory tracking")
 
 ### Pre-Reqs
-The easiest way to setup PX4 simulation with ROS on Ubuntu Linux is to use the standard installation script that can be found at Development Environment on Linux > Gazebo with ROS.
+Linux Ubuntu 18.04 running ROS Melodic
+The easiest way to setup PX4 simulation with ROS on Ubuntu Linux is to use the standard installation script that can be found at Development Environment
+- on Linux > Gazebo with ROS( [Linux Gazebo with ROS](https://docs.px4.io/main/en/dev_setup/dev_env_linux_ubuntu.html#ros-gazebo) ) 
 
 The script automates the installtion instructions covered in this topic, installing everything you need: PX4, ROS, the Gazebo simulator, and MAVROS.
 
@@ -27,7 +29,7 @@ cd <Firmware_directory>
 DONT_RUN=1 make px4_sitl_default gazebo
 ```
 To source the PX4 environment, run the following commands
-
+	
 ```bash
 cd <Firmware_directory>
 source ~/catkin_ws/devel/setup.bash    # (optional)
@@ -67,38 +69,6 @@ cd ~/catkin_ws/src
 git clone https://github.com/Y-Roman/Drone.git
 ```
 
-Now continue either with wstool to automatically download dependencies or download them manually.
-
-###### With wstool
-
-wstool automates the installation of dependencies and updates all packages. If you have no problem updating the packages required by mavros_controllers and/or any other packages, follow this procedure. If not, follow the next 'Manually Download dependencies and build' section.
-
-```bash
-cd ~/catkin_ws
-wstool merge -t src src/mavros_controllers/dependencies.rosinstall
-wstool update -t src -j4
-rosdep install --from-paths src --ignore-src -y --rosdistro $ROS_DISTRO
-catkin build
-source ~/catkin_ws/devel/setup.bash
-```
-
-
-###### Manually Download dependencies and build
-
-If you did not install with wstool, you need to manually download the dependencies:
-- [catkin_simple](https://github.com/catkin/catkin_simple)
-- [eigen_catkin](https://github.com/ethz-asl/eigen_catkin)
-- [mav_comm](https://github.com/ethz-asl/mav_comm)
-
-Do:
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/catkin/catkin_simple
-git clone https://github.com/ethz-asl/eigen_catkin
-git clone https://github.com/ethz-asl/mav_comm
-```
-
 Build all the packages:
 
 ```bash
@@ -108,21 +78,31 @@ source ~/catkin_ws/devel/setup.bash
 ```
 
 ## Running the code
-Remember to source the workspace `setup.bash` before sourcing the PX4 environment.
+Running the Gazebo Simulator
+Note: Remember to source the workspace `setup.bash` before running any ROS Nodes.
+
+Running the Gazebo Simulator
 ```bash
-cd <Firmware_directory>
+cd <catkin_ws>
 source ~/catkin_ws/devel/setup.bash    # (necessary)
-source Tools/setup_gazebo.bash $(pwd) $(pwd)/build/px4_sitl_default
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)
-export ROS_PACKAGE_PATH=$ROS_PACKAGE_PATH:$(pwd)/Tools/sitl_gazebo
+cd catkin_ws/bash
+./1_gazebo.sh
 ```
-The following launch file enables the geometric controller to follow a circular trajectory
-
+To run Mavros in SITL
 ``` bash
-roslaunch geometric_controller sitl_trajectory_track_circle.launch
+cd <catkin_ws>
+source ~/catkin_ws/devel/setup.bash    # (necessary)
+cd catkin_ws/bash
+./2_mavros.sh
 ```
 
-If the UAV does not takeoff, please open QGroundControl and enable virtual joystick as mentioned [here](https://docs.qgroundcontrol.com/master/en/SettingsView/VirtualJoystick.html)
+To run Offboard Control
+``` bash
+cd <catkin_ws>
+source ~/catkin_ws/devel/setup.bash    # (necessary)
+cd catkin_ws/bash
+./offboard.sh
+```
 
 ## Nodes
 `mavros_controllers` include the following packages.
@@ -175,54 +155,3 @@ Trajectory publisher publishes continous trajectories to the trajectory_controll
     - /trajectory_publisher/motionselector ([std_msgs/int32](http://docs.ros.org/api/std_msgs/html/msg/Int32.html));
     - /mavros/local_position/pose ( [geometry_msgs/PoseStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/PoseStamped.html) )
     - /mavros/local_position/velocity( [geometry_msgs/TwistStamped](http://docs.ros.org/api/geometry_msgs/html/msg/TwistStamped.html) )
-
-## Contact
-Jaeyoung Lim 	jalim@ethz.ch
-
-## Citation
-In case you use this work as an academic context, please cite as the following.
-```
-@misc{jaeyoung_lim_2019_2619313,
-  author       = {Jaeyoung Lim},
-  title        = {{mavros_controllers - Aggressive trajectory 
-                   tracking using mavros for PX4 enabled vehicles}},
-  month        = mar,
-  year         = 2019,
-  doi          = {10.5281/zenodo.2652888},
-  url          = {https://doi.org/10.5281/zenodo.2652888}
-}
-```
-
-## References
-[1] Lee, Taeyoung, Melvin Leoky, and N. Harris McClamroch. "Geometric tracking control of a quadrotor UAV on SE (3)." Decision and Control (CDC), 2010 49th IEEE Conference on. IEEE, 2010.
-
-[2] Faessler, Matthias, Antonio Franchi, and Davide Scaramuzza. "Differential flatness of quadrotor dynamics subject to rotor drag for accurate tracking of high-speed trajectories." IEEE Robot. Autom. Lett 3.2 (2018): 620-626.
-
-### Build issues:
-
-
-###### catkin_simple() or eigen_catkin() not found
-
- This should not have happened if you clone the catkin_simple and eigen_catkin repositories. Try again:
-
-```bash
-cd ~/catkin_ws/src
-git clone https://github.com/catkin/catkin_simple
-git clone https://github.com/ethz-asl/eigen_catkin
-cd ~/catkin_ws
-catkin build mavros_controllers
-source ~/catkin_ws/devel/setup.bash
-```
-
-- Refer to [this issue](https://github.com/Jaeyoung-Lim/mavros_controllers/issues/61).
-
-###### iris.sdf model not found: 
-
-Try:
-```bash
-cd <Firmware_directory>
-make px4_sitl_default sitl_gazebo
-```
-
-or refer to [this issue](https://github.com/PX4/Firmware/issues?utf8=%E2%9C%93&q=%2Firis%2Firis.sdf+) the [ROS with Gazebo Simulation PX4 Documentation](https://dev.px4.io/master/en/simulation/ros_interface.html). 
-
