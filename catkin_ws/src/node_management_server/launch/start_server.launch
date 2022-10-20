@@ -1,0 +1,3 @@
+<launch>
+  <node name='nlp_ros_server' type='main.py' pkg='nlp_ros' output='screen'/>
+</launch>
