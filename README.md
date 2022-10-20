@@ -11,8 +11,10 @@ The repository contains Offboard Control for controlling UAVs using the mavros p
 - offboard_pkg: Offboard mode is primarily used for controlling vehicle movement and attitude. It supports a set of MAVLink messages. Offboard package includes the trajectory_publisher which publishes setpoints as states from motion primitives / trajectories for the controller to follow.
 - Node Management Server: Utilizes Flask to host a service to take in commands from an external such as a mobile app and sends it to Drone via ROS.
 
-[![Managment System Hierarchy](Readme_files/nms.png "Managment System Hierarchy")
-[![System Architecture](Readme_files/architecture.png "System Architecture")
+[![Managment System Hierarchy](./Readme_files/nms.png "Managment System Hierarchy")
+
+[![System Architecture](./Readme_files/architecture.png "System Architecture")
+
 [![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg)](https://youtu.be/IEyocdnlYw0 "Circular trajectory tracking")
 
 ### Pre-Reqs
