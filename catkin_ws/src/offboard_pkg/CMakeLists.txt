@@ -128,8 +128,13 @@ include_directories(
 #add_executable(offboard_node src/square.cpp)
 #target_link_libraries(offboard_node ${catkin_LIBRARIES})
 
-add_executable(offboard_node src/TakeoffSquareLand.cpp)
+#add_executable(offboard_node src/TakeoffSquareLand.cpp)
+#Target_link_libraries(offboard_node ${catkin_LIBRARIES})
+
+add_executable(offboard_node src/squareSmoothOrientation.cpp)
 Target_link_libraries(offboard_node ${catkin_LIBRARIES})
+
+
 
 add_executable(pub_setpoints src/pub_att.cpp)
 target_link_libraries(pub_setpoints ${catkin_LIBRARIES})

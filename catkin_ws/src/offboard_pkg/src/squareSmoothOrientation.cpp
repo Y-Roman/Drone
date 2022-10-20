@@ -16,7 +16,7 @@
 
 #define NINETY 0.7071f
 #define SQUARE 2.0f
-#define DURATION 10
+#define DURATION 5
 #define RATE 30
 
 
@@ -131,18 +131,13 @@ int main(int argc, char **argv)
       rate.sleep();
     }
     ROS_INFO("first way point finished!");
-    
-    //set orientation to be left
-    //pose.pose.orientation.w=NINETY;
-    //pose.pose.orientation.z=NINETY;
-    
+     
     //Turn for DURATION seconds
-    ROS_INFO("Turn Left for 10 seconds");
+    ROS_INFO("Turn Left for 5 seconds");
     
     int total = DURATION*RATE;
     float stepW = 0.707f/total;
     float stepZ = 0.707f/total;
-    
 
     for(int i = 0; ros::ok() && i < DURATION*RATE; ++i){
       pose.pose.orientation.w+=stepW;
@@ -163,13 +158,9 @@ int main(int argc, char **argv)
       rate.sleep();
     }
     ROS_INFO("second way point finished!");
-    // CURR ORIENTATION W: 0.707000 Z: 0.707000 
     ROS_INFO("CURR ORIENTATION W: %f Z: %f \n",pose.pose.orientation.w,pose.pose.orientation.z);
    
     ROS_INFO("Turn Right for 10 seconds");
-   //set orientation to be right
-    //pose.pose.orientation.w=1;
-    //pose.pose.orientation.z=0;
     total = DURATION*RATE;
     stepW = abs(pose.pose.orientation.w-1)/total;
     stepZ = abs(pose.pose.orientation.z-0)/total;
@@ -187,7 +178,7 @@ int main(int argc, char **argv)
     pose.pose.position.y = SQUARE;
     pose.pose.position.z = FLIGHT_ALTITUDE;
 
-    //send setpoints for 10 seconds
+    //send setpoints for 5 seconds
     ROS_INFO("going to third way point");
     for(int i = 0; ros::ok() && i < 10*20; ++i){
 
@@ -197,14 +188,9 @@ int main(int argc, char **argv)
     }
     ROS_INFO("third way point finished!");
     
-    // CURR ORIENTATION W:1  Z:0 
     ROS_INFO("CURR ORIENTATION W: %f Z: %f \n",pose.pose.orientation.w,pose.pose.orientation.z);
     
-    ROS_INFO("Turn Right for 10 seconds");
-    //set orientation to be right
-    //pose.pose.orientation.w=NINETY;
-    //pose.pose.orientation.z=-1*NINETY;
-    
+    ROS_INFO("Turn Right for 5 seconds");
     total = DURATION*RATE;
     stepW = abs(pose.pose.orientation.w-NINETY)/total;
     stepZ = abs(pose.pose.orientation.z-(-1*NINETY))/total;
@@ -222,7 +208,7 @@ int main(int argc, char **argv)
     pose.pose.position.y = 0;
     pose.pose.position.z = FLIGHT_ALTITUDE;
 
-    //send setpoints for 10 seconds
+    //send setpoints for 5 seconds
     ROS_INFO("going to forth way point");
     for(int i = 0; ros::ok() && i < 10*20; ++i){
 
@@ -232,12 +218,8 @@ int main(int argc, char **argv)
     }
     ROS_INFO("forth way point finished!");
     
-    // CURR ORIENTATION W:0.707  Z:-0.707
     ROS_INFO("CURR ORIENTATION W: %f Z: %f \n",pose.pose.orientation.w,pose.pose.orientation.z);
     ROS_INFO("Turn Right for 10 seconds");
-    //set orientation to be right
-    //pose.pose.orientation.w=0;
-    //pose.pose.orientation.z=-1;
 
     total = DURATION*RATE;
     stepW = abs(pose.pose.orientation.w-0)/total;
@@ -275,7 +257,7 @@ int main(int argc, char **argv)
     rate.sleep();
 }
 
-
+//************************ Land ************************\\
     ROS_INFO("trying to land");
     while (!(land_client.call(land_cmd) &&
             land_cmd.response.success)){
