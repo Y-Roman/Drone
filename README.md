@@ -118,8 +118,8 @@ Offboard_pkg publishes and subscribes the following topics.
     - /takeoff
 	- /landSub
 - Services
-	-mavros/cmd/arming ( [mavros/cmd/arming](http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html) )
-	-mavros/set_mode ( [mavros/set_mode](http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html) )
+	- mavros/cmd/arming ( [mavros/cmd/arming](http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html) )
+	- mavros/set_mode ( [mavros/set_mode](http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html) )
 	
 ### Management Node Server (Hosted via Flask)
 
