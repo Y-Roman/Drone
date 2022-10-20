@@ -19,7 +19,7 @@ The repository contains Offboard Control for controlling UAVs using the mavros p
 
 ![System Architecture](Readme_files/architecture.PNG)
 
-[![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg)]("Circular trajectory tracking"){width=90%}
+[![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg){width=90%}]
 
 ### Pre-Reqs
 Linux Ubuntu 18.04 running ROS Melodic
