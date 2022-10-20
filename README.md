@@ -93,7 +93,7 @@ To run Mavros in SITL
 cd <catkin_ws>
 source ~/catkin_ws/devel/setup.bash    # (necessary)
 cd catkin_ws/bash
-./2_mavros.sh
+./2_mavros_simulation.sh
 ```
 
 To run Offboard Control
@@ -105,53 +105,24 @@ cd catkin_ws/bash
 ```
 
 ## Nodes
-`mavros_controllers` include the following packages.
-### geometric_controller
+`Src` include the following packages.
+### Offboard_pkg
 
-The geometric controller publishes and subscribes the following topics.
-- Parameters
-    - /geometric_controller/mavname (default: "iris")
-    - /geometric_controller/ctrl_mode (default: MODE_BODYRATE)
-    - /geometric_controller/enable_sim (default: true)
-    - /geometric_controller/enable_gazebo_state (default: false)
-    - /geometric_controller/max_acc (default: 7.0)
-    - /geometric_controller/yaw_heading (default: 0.0)
-    - /geometric_controller/drag_dx (default: 0.0)
-    - /geometric_controller/drag_dy (default: 0.0)
-    - /geometric_controller/drag_dz (default: 0.0)
-    - /geometric_controller/attctrl_constant (default: 0.2)
-    - /geometric_controller/normalizedthrust_constant (default: 0.1)
-
+Offboard_pkg publishes and subscribes the following topics.
 - Published Topics
-	- command/bodyrate_command ( [mavros_msgs/AttitudeTarget](http://docs.ros.org/api/mavros_msgs/html/msg/AttitudeTarget.html) )
-	- reference/pose ( [geometry_msgs/PoseStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/PoseStamped.html) )
+	- geometry_msgs/PoseStamped ( [geometry_msgs/PoseStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/PoseStamped.html) )
 
 - Subscribed Topics
-	- reference/setpoint ( [geometry_msgs/TwistStamped](http://docs.ros.org/api/geometry_msgs/html/msg/TwistStamped.html) )
 	- /mavros/state ( [mavros_msgs/State](http://docs.ros.org/api/mavros_msgs/html/msg/State.html) )
 	- /mavros/local_position/pose ( [geometry_msgs/PoseStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/PoseStamped.html) )
-	- /gazebo/model_states( [gazebo_msgs/ModelStates](http://docs.ros.org/kinetic/api/gazebo_msgs/html/msg/ModelState.html) )
-	- /mavros/local_position/velocity( [geometry_msgs/TwistStamped](http://docs.ros.org/api/geometry_msgs/html/msg/TwistStamped.html) )
+    - /takeoff
+	- /landSub
+- Services
+	-mavros/cmd/arming ( [mavros/cmd/arming](http://docs.ros.org/en/api/mavros_msgs/html/srv/CommandBool.html) )
+	-mavros/set_mode ( [mavros/set_mode](http://docs.ros.org/en/api/mavros_msgs/html/srv/SetMode.html) )
+	
+### Management Node Server (Hosted via Flask)
 
-### trajectory_publisher
-
-Trajectory publisher publishes continous trajectories to the trajectory_controller.
-- Parameters
-    - /trajectory_publisher/initpos_x (default: 0.0)
-    - /trajectory_publisher/initpos_y (default: 0.0)
-    - /trajectory_publisher/initpos_z (default: 1.0)
-    - /trajectory_publisher/updaterate (default: 0.01)
-    - /trajectory_publisher/horizon (default: 1.0)
-    - /trajectory_publisher/maxjerk (default: 10.0)
-    - /trajectory_publisher/trajectory_type (default: 0)
-    - /trajectory_publisher/number_of_primitives (default: 7)
-    - /trajectory_publisher/shape_radius (default: 1.0)
+Managment Node Server takes in commands from an external system (i.e app) and sends it to Drone via ROS.
 
 - Published Topics
-	- reference/trajectory ( [nav_msgs/Path](http://docs.ros.org/kinetic/api/nav_msgs/html/msg/Path.html) )
-	- reference/setpoint ( [geometry_msgs/TwistStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/Twist.html) )
-
-- Subscribed Topics
-    - /trajectory_publisher/motionselector ([std_msgs/int32](http://docs.ros.org/api/std_msgs/html/msg/Int32.html));
-    - /mavros/local_position/pose ( [geometry_msgs/PoseStamped](http://docs.ros.org/kinetic/api/geometry_msgs/html/msg/PoseStamped.html) )
-    - /mavros/local_position/velocity( [geometry_msgs/TwistStamped](http://docs.ros.org/api/geometry_msgs/html/msg/TwistStamped.html) )
