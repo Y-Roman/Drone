@@ -19,8 +19,6 @@ The repository contains Offboard Control for controlling UAVs using the mavros p
 
 ![System Architecture](Readme_files/architecture.PNG)
 
-[![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg){width=90%}]
-
 ### Pre-Reqs
 Linux Ubuntu 18.04 running ROS Melodic
 The easiest way to setup PX4 simulation with ROS on Ubuntu Linux is to use the standard installation script that can be found at Development Environment
@@ -97,6 +95,11 @@ source ~/catkin_ws/devel/setup.bash    # (necessary)
 cd catkin_ws/bash
 ./1_gazebo.sh
 ```
+
+
+[![Circular trajectory tracking](https://img.youtube.com/vi/IEyocdnlYw0/0.jpg)]
+
+
 To run Mavros in SITL
 ``` bash
 cd <catkin_ws>
