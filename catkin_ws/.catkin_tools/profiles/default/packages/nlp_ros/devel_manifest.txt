@@ -1,0 +1,5 @@
+nlp_ros
+/home/user/Drone/catkin_ws/devel/.private/nlp_ros/cmake.lock /home/user/Drone/catkin_ws/devel/./cmake.lock
+/home/user/Drone/catkin_ws/devel/.private/nlp_ros/lib/pkgconfig/nlp_ros.pc /home/user/Drone/catkin_ws/devel/lib/pkgconfig/nlp_ros.pc
+/home/user/Drone/catkin_ws/devel/.private/nlp_ros/share/nlp_ros/cmake/nlp_rosConfig.cmake /home/user/Drone/catkin_ws/devel/share/nlp_ros/cmake/nlp_rosConfig.cmake
+/home/user/Drone/catkin_ws/devel/.private/nlp_ros/share/nlp_ros/cmake/nlp_rosConfig-version.cmake /home/user/Drone/catkin_ws/devel/share/nlp_ros/cmake/nlp_rosConfig-version.cmake

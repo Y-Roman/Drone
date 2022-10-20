@@ -1,0 +1,1 @@
+/home/user/catkin_ws/devel/.private/pocketsphinx/share/pocketsphinx/cmake/pocketsphinxConfig-version.cmake

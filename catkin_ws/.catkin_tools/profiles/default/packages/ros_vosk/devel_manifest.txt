@@ -1,0 +1,20 @@
+ros-vosk
+/home/user/catkin_ws/devel/.private/ros_vosk/cmake.lock /home/user/catkin_ws/devel/./cmake.lock
+/home/user/catkin_ws/devel/.private/ros_vosk/lib/python2.7/dist-packages/ros_vosk/__init__.py /home/user/catkin_ws/devel/lib/python2.7/dist-packages/ros_vosk/__init__.py
+/home/user/catkin_ws/devel/.private/ros_vosk/lib/python2.7/dist-packages/ros_vosk/msg/_speech_recognition.py /home/user/catkin_ws/devel/lib/python2.7/dist-packages/ros_vosk/msg/_speech_recognition.py
+/home/user/catkin_ws/devel/.private/ros_vosk/lib/python2.7/dist-packages/ros_vosk/msg/__init__.py /home/user/catkin_ws/devel/lib/python2.7/dist-packages/ros_vosk/msg/__init__.py
+/home/user/catkin_ws/devel/.private/ros_vosk/lib/pkgconfig/ros_vosk.pc /home/user/catkin_ws/devel/lib/pkgconfig/ros_vosk.pc
+/home/user/catkin_ws/devel/.private/ros_vosk/share/gennodejs/ros/ros_vosk/_index.js /home/user/catkin_ws/devel/share/gennodejs/ros/ros_vosk/_index.js
+/home/user/catkin_ws/devel/.private/ros_vosk/share/gennodejs/ros/ros_vosk/msg/_index.js /home/user/catkin_ws/devel/share/gennodejs/ros/ros_vosk/msg/_index.js
+/home/user/catkin_ws/devel/.private/ros_vosk/share/gennodejs/ros/ros_vosk/msg/speech_recognition.js /home/user/catkin_ws/devel/share/gennodejs/ros/ros_vosk/msg/speech_recognition.js
+/home/user/catkin_ws/devel/.private/ros_vosk/share/roseus/ros/ros_vosk/manifest.l /home/user/catkin_ws/devel/share/roseus/ros/ros_vosk/manifest.l
+/home/user/catkin_ws/devel/.private/ros_vosk/share/roseus/ros/ros_vosk/msg/speech_recognition.l /home/user/catkin_ws/devel/share/roseus/ros/ros_vosk/msg/speech_recognition.l
+/home/user/catkin_ws/devel/.private/ros_vosk/share/common-lisp/ros/ros_vosk/msg/_package.lisp /home/user/catkin_ws/devel/share/common-lisp/ros/ros_vosk/msg/_package.lisp
+/home/user/catkin_ws/devel/.private/ros_vosk/share/common-lisp/ros/ros_vosk/msg/_package_speech_recognition.lisp /home/user/catkin_ws/devel/share/common-lisp/ros/ros_vosk/msg/_package_speech_recognition.lisp
+/home/user/catkin_ws/devel/.private/ros_vosk/share/common-lisp/ros/ros_vosk/msg/ros_vosk-msg.asd /home/user/catkin_ws/devel/share/common-lisp/ros/ros_vosk/msg/ros_vosk-msg.asd
+/home/user/catkin_ws/devel/.private/ros_vosk/share/common-lisp/ros/ros_vosk/msg/speech_recognition.lisp /home/user/catkin_ws/devel/share/common-lisp/ros/ros_vosk/msg/speech_recognition.lisp
+/home/user/catkin_ws/devel/.private/ros_vosk/share/ros_vosk/cmake/ros_vosk-msg-extras.cmake /home/user/catkin_ws/devel/share/ros_vosk/cmake/ros_vosk-msg-extras.cmake
+/home/user/catkin_ws/devel/.private/ros_vosk/share/ros_vosk/cmake/ros_voskConfig.cmake /home/user/catkin_ws/devel/share/ros_vosk/cmake/ros_voskConfig.cmake
+/home/user/catkin_ws/devel/.private/ros_vosk/share/ros_vosk/cmake/ros_vosk-msg-paths.cmake /home/user/catkin_ws/devel/share/ros_vosk/cmake/ros_vosk-msg-paths.cmake
+/home/user/catkin_ws/devel/.private/ros_vosk/share/ros_vosk/cmake/ros_voskConfig-version.cmake /home/user/catkin_ws/devel/share/ros_vosk/cmake/ros_voskConfig-version.cmake
+/home/user/catkin_ws/devel/.private/ros_vosk/include/ros_vosk/speech_recognition.h /home/user/catkin_ws/devel/include/ros_vosk/speech_recognition.h

@@ -1,0 +1,6 @@
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc to existing file /home/user/Drone/catkin_ws/devel/lib/pkgconfig/realsense2_description.pc
+Warning: Source hash: 925d43da3fda28ccaad8b6070f2838ac
+Warning: Dest hash: 9d5f77d4fe54b1c4811d29cdb15a8a22
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake to existing file /home/user/Drone/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
+Warning: Source hash: df24eaf59e630208252dfa30b96ce330
+Warning: Dest hash: 8f3e90ae4e3a35bf13f710dc90e12e6c

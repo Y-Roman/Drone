@@ -1,0 +1,1 @@
+/home/user/catkin_ws/devel/.private/ros_vosk/include/ros_vosk/speech_recognition.h

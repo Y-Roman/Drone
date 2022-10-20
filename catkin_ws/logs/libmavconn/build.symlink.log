@@ -1,0 +1,23 @@
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/libmavconn/lib/libmavconn.so to existing file /home/user/Drone/catkin_ws/devel/lib/libmavconn.so
+Warning: Source hash: c16c81b9f28ea0ff91ab10e64cf4d3b3
+Warning: Dest hash: f9624659b273de18bd729e35aea9489d
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/libmavconn/lib/pkgconfig/libmavconn.pc to existing file /home/user/Drone/catkin_ws/devel/lib/pkgconfig/libmavconn.pc
+Warning: Source hash: 7d624c52a092190eec546cd8344d4e99
+Warning: Dest hash: fe1cfcc7b88764fd7e3966acabce6da8
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig.cmake to existing file /home/user/Drone/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig.cmake
+Warning: Source hash: 9545c77c21211c6542f7367b7eecd31b
+Warning: Dest hash: a7bc3f95bcdf0b3d9b0a8ec484cc5cd5
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconn-extras.cmake to existing file /home/user/Drone/catkin_ws/devel/share/libmavconn/cmake/libmavconn-extras.cmake
+Warning: Source hash: eb1ea96f8540bfd91de3a7ab5c854239
+Warning: Dest hash: 80c86a32e98c218c562af46819e233b5
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/cmake.lock, /home/user/catkin_ws/devel/./cmake.lock)
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/lib/libmavconn.so, /home/user/catkin_ws/devel/lib/libmavconn.so)
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/lib/pkgconfig/libmavconn.pc, /home/user/catkin_ws/devel/lib/pkgconfig/libmavconn.pc)
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig.cmake, /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig.cmake)
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconnConfig-version.cmake, /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig-version.cmake)
+Cleaning: (/home/user/catkin_ws/devel/.private/libmavconn/share/libmavconn/cmake/libmavconn-extras.cmake, /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconn-extras.cmake)
+Unlinking: /home/user/catkin_ws/devel/lib/libmavconn.so
+Unlinking: /home/user/catkin_ws/devel/lib/pkgconfig/libmavconn.pc
+Unlinking: /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig.cmake
+Unlinking: /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconnConfig-version.cmake
+Unlinking: /home/user/catkin_ws/devel/share/libmavconn/cmake/libmavconn-extras.cmake

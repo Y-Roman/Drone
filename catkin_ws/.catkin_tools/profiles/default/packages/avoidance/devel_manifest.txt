@@ -1,0 +1,6 @@
+PX4-Avoidance/avoidance
+/home/user/catkin_ws/devel/.private/avoidance/cmake.lock /home/user/catkin_ws/devel/./cmake.lock
+/home/user/catkin_ws/devel/.private/avoidance/lib/libavoidance.so /home/user/catkin_ws/devel/lib/libavoidance.so
+/home/user/catkin_ws/devel/.private/avoidance/lib/pkgconfig/avoidance.pc /home/user/catkin_ws/devel/lib/pkgconfig/avoidance.pc
+/home/user/catkin_ws/devel/.private/avoidance/share/avoidance/cmake/avoidanceConfig-version.cmake /home/user/catkin_ws/devel/share/avoidance/cmake/avoidanceConfig-version.cmake
+/home/user/catkin_ws/devel/.private/avoidance/share/avoidance/cmake/avoidanceConfig.cmake /home/user/catkin_ws/devel/share/avoidance/cmake/avoidanceConfig.cmake

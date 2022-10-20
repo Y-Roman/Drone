@@ -1,0 +1,1 @@
+/home/user/catkin_ws/devel/.private/ros_vosk/share/roseus/ros/ros_vosk/msg/speech_recognition.l

@@ -1,0 +1,1 @@
+/home/user/catkin_ws/devel/.private/ros_vosk/share/ros_vosk/cmake/ros_voskConfig-version.cmake

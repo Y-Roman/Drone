@@ -1,0 +1,1 @@
+/home/user/catkin_ws/devel/.private/local_planner/lib/python2.7/dist-packages/local_planner/__init__.py

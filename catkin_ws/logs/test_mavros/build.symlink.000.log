@@ -1,0 +1,23 @@
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/test_mavros/lib/libmavros_sitl_test.so to existing file /home/user/Drone/catkin_ws/devel/lib/libmavros_sitl_test.so
+Warning: Source hash: 7f2147dd542d9ed0ea32d2ac49647cf5
+Warning: Dest hash: 3fb5524873564f44fce8404d8e76f8bf
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/test_mavros/lib/test_mavros/sitl_test_node to existing file /home/user/Drone/catkin_ws/devel/lib/test_mavros/sitl_test_node
+Warning: Source hash: b02836d7339f5502215c3fd6d7a2dd5b
+Warning: Dest hash: 4dfa24df6b9986e6a2659527fdcc07f7
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/test_mavros/lib/pkgconfig/test_mavros.pc to existing file /home/user/Drone/catkin_ws/devel/lib/pkgconfig/test_mavros.pc
+Warning: Source hash: 77e7f457961035efc0bc71598f4c586d
+Warning: Dest hash: 490a63bf298b73f6857f40bb1702a66b
+Warning: Cannot symlink from /home/user/Drone/catkin_ws/devel/.private/test_mavros/share/test_mavros/cmake/test_mavrosConfig.cmake to existing file /home/user/Drone/catkin_ws/devel/share/test_mavros/cmake/test_mavrosConfig.cmake
+Warning: Source hash: 6302d0375ccf47d9900ffac43c827dcc
+Warning: Dest hash: 5927d9b559634733685eb26fc913151d
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/cmake.lock, /home/user/catkin_ws/devel/./cmake.lock)
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/lib/libmavros_sitl_test.so, /home/user/catkin_ws/devel/lib/libmavros_sitl_test.so)
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/lib/test_mavros/sitl_test_node, /home/user/catkin_ws/devel/lib/test_mavros/sitl_test_node)
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/lib/pkgconfig/test_mavros.pc, /home/user/catkin_ws/devel/lib/pkgconfig/test_mavros.pc)
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/share/test_mavros/cmake/test_mavrosConfig.cmake, /home/user/catkin_ws/devel/share/test_mavros/cmake/test_mavrosConfig.cmake)
+Cleaning: (/home/user/catkin_ws/devel/.private/test_mavros/share/test_mavros/cmake/test_mavrosConfig-version.cmake, /home/user/catkin_ws/devel/share/test_mavros/cmake/test_mavrosConfig-version.cmake)
+Unlinking: /home/user/catkin_ws/devel/lib/libmavros_sitl_test.so
+Unlinking: /home/user/catkin_ws/devel/lib/test_mavros/sitl_test_node
+Unlinking: /home/user/catkin_ws/devel/lib/pkgconfig/test_mavros.pc
+Unlinking: /home/user/catkin_ws/devel/share/test_mavros/cmake/test_mavrosConfig.cmake
+Unlinking: /home/user/catkin_ws/devel/share/test_mavros/cmake/test_mavrosConfig-version.cmake
