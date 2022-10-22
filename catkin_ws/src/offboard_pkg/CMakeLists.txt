@@ -139,9 +139,9 @@ Target_link_libraries(offboard_node ${catkin_LIBRARIES})
 add_executable(pub_setpoints src/pub_att.cpp)
 target_link_libraries(pub_setpoints ${catkin_LIBRARIES})
 
-catkin_install_python(PROGRAMS src/pythonRosCommands.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+#catkin_install_python(PROGRAMS src/pythonRosCommands.py
+#  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+#)
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}

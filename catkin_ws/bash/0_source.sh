@@ -1,3 +1,3 @@
 #!/bin/bash
-source ~/catkin_ws/devel/setup.bash
+source ~Drone/catkin_ws/devel/setup.bash
 
